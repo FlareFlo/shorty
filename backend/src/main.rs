@@ -56,7 +56,9 @@ lazy_static! {
 }
 
 #[tokio::main]
-async fn main() -> Result<(), ShortyError> {
+async fn main() -> Result<(), color_eyre::Report> {
+	color_eyre::install()?;
+
 	if Path::new(".env").exists() {
 		dotenvy::dotenv()?;
 	}

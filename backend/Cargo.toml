@@ -32,6 +32,8 @@ lazy_static = "1.4.0"
 dotenvy = "0.15.7"
 konst = "0.3.5"
 
+color-eyre = "0.6.2"
+
 [dependencies.sqlx]
 version = "0.6.3"
 features = ["runtime-tokio-rustls", "chrono", "migrate", "offline", "macros", "sqlite"]
@@ -47,6 +49,7 @@ version = "0.2"
 [build-dependencies]
 serde = "^1.0"
 toml = { version = "0.7.6", features = ["indexmap"]}
+color-eyre = "0.6.2"
 
 [features]
 default = ["integrated-frontend"]
